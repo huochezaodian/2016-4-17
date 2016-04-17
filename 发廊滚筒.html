@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+body {
+  background: black;
+}
+@-webkit-keyframes test {
+  from {
+    left: 0;
+  }
+  to {
+    left: -114px;
+  }
+}
+@keyframes test {
+  from {
+    left: 0;
+  }
+  to {
+    left: -114px;
+  }
+}
+#box {
+  width: 80px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 100px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+.bar {
+  width: 300px;
+  height: 100%;
+  background: -webkit-repeating-linear-gradient(135deg, #ff0000 0, #ff0000 20px, #ffffff 20px, #ffffff 40px, #0000ff 40px, #0000ff 60px, #ffffff 60px, #ffffff 80px);
+  background: repeating-linear-gradient(-45deg, #ff0000 0, #ff0000 20px, #ffffff 20px, #ffffff 40px, #0000ff 40px, #0000ff 60px, #ffffff 60px, #ffffff 80px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation-name: test;
+          animation-name: test;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+</style>
+</head>
+<body>
+	<div id="box">
+		<div class="bar"></div>
+	</div>
+</body>
+</html>
